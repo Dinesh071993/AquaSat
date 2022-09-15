@@ -32,12 +32,12 @@ public class LoginTest extends TestBase {
 		login.enterEmail(prop.getProperty("username"));
 		login.enterPassword(prop.getProperty("password"));
 		login.clickLoginButton();
-		Thread.sleep(5000);
+		Thread.sleep(9000);
 	}
 
 	@AfterMethod
 	public void tearDown() {
-//		driver.quit();
+		driver.quit();
 	}
 
 }

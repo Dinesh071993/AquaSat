@@ -21,7 +21,7 @@ public class TestBase {
 
 		prop = new Properties();
 		FileInputStream ip = new FileInputStream(
-				"C:\\Users\\Dinesh\\eclipse-workspace\\AquaSatellite\\src\\main\\java\\com\\aqua\\config\\config.properties");
+				"src/main/java/com/aqua/util/driver/config/config.properties");
 		prop.load(ip);
 
 	}
@@ -30,12 +30,11 @@ public class TestBase {
 		String browsername = prop.getProperty("browser");
 		if (browsername.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver",
-					"C:\\Users\\Dinesh\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
-
+					"src/main/java/com/aqua/util/driver/chromedriver.exe");
 			driver = new ChromeDriver();
 		} else if (browsername.equals("firefox")) {
 			System.setProperty("webdriver.gecko.driver",
-					"C:\\Users\\Dinesh\\Downloads\\geckodriver-v0.31.0-win64\\geckodriver.exe");
+					"src/main/java/com/aqua/util/driver/geckodriver.exe");
 			driver = new FirefoxDriver();
 			}
 			driver.manage().window().maximize();
